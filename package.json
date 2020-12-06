@@ -1,22 +1,21 @@
 {
-  "name": "jest-another-rpg",
+  "name": "player",
   "version": "1.0.0",
-  "description": "Moudle 10 oop project",
+  "description": "",
   "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vloriandervishi/jest-another-RPG.git"
-  },
-  "author": "Vlorian Dervishi",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vloriandervishi/jest-another-RPG/issues"
-  },
-  "homepage": "https://github.com/vloriandervishi/jest-another-RPG#readme",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "test": "^0.6.0"
   }
 }
