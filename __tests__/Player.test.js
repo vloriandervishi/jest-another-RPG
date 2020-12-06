@@ -59,3 +59,28 @@ test("subtracts from player's health",()=>{
    player.reduceHealth(9999);
    expect(player.health).toBe(0);
 });
+test("gets player's attack value", ()=>{
+  const player = new Player('Dave');
+  player.strength=10;
+  expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
+  expect(player.getAttackValue()).toBeLessThanOrEqual(15);
+});
+test('adds a potion to the inventory',()=>{
+ const player= new Player('Dave');
+ const oldCount= player.inventory.length;
+
+ player.addPotion(new Potion());
+ expect(player.inventory.length).toBeGreaterThan(oldCount);
+});
+
+// We need to write tests that ensure that usePotion() removes the correct Potion from the player inventory
+
+test('uses a potion from inventory',()=>{
+   const player = new Player('Dave');
+   player.inventory=[new Potion(), new Potion(),new Potion()];
+   const oldCount= player.inventory.length;
+
+   player.usePotion(1);
+
+   expect(player.inventory.length).toBeLessThan(oldCount);
+});
